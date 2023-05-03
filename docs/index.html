@@ -14853,9 +14853,9 @@ div.jp-OutputPrompt {
 <li>2015-16: <code>pyproject.toml</code> compilation dependencies DL &amp; run in isolated environment during <code>pip install</code>ation</li>
 <li><code>skbuild</code> library helps Python call CMake to build CPython exts</li>
 <li><code>cmake</code> &amp; <code>ninja</code> (alt to <code>make</code>) binaries <code>pip install</code>able</li>
-<li>2003: <code>swig</code> reduce interface boilerplate, 2016: on <code>pip</code></li>
+<li><code>swig</code> reduce interface boilerplate (2003), 2016: on <code>pip</code></li>
 <li>so all build deps available on <code>pip</code></li>
-<li>user &quot;just adds compiler&quot;</li>
+<li>user &quot;just adds compiler&quot;; <code>pip</code> automagically does the rest (in theory)</li>
 </ul>
 
 </div>
@@ -14882,12 +14882,10 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">locs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">764</span> <span class="o">+</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">458</span> <span class="o">+</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">518</span><span class="p">,</span> <span class="mi">421</span> <span class="o">+</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">134</span> <span class="o">+</span> <span class="mi">115</span> <span class="o">+</span> <span class="mi">8</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">locs</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Docs + Code examples&quot;</span><span class="p">,</span> <span class="s2">&quot;100% Python test coverage + CI config&quot;</span><span class="p">,</span> <span class="s2">&quot;C++/CUDA/SWIG #include &lt;headers&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;Python/C++/CUDA source&quot;</span><span class="p">,</span> <span class="s2">&quot;CMakeLists.txt + setup.{py,cfg} + pyproject.toml&quot;</span><span class="p">],</span> <span class="n">autopct</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pct</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">pct</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">locs</span><span class="p">)));</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lines of Code&quot;</span><span class="p">);</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">git_fame_plot</span><span class="p">(</span><span class="s2">&quot;./cuvec&quot;</span><span class="p">,</span> <span class="n">bytype</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
